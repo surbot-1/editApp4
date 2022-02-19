@@ -90,10 +90,11 @@
                   
                   document.querySelector('#div2').innerHTML = "";
                   document.querySelector('#div2').innerHTML += "You are Logedin. Start chat";
-                  updateOnlineStatus();
-                  readEditAppOnlineStatus();
-                  writeEditAppOnlineStatus();
-                  takeSnapshot();
+                  initiateChat();
+                 //  updateOnlineStatus();
+                //  readEditAppOnlineStatus();
+                //  writeEditAppOnlineStatus();
+                //  takeSnapshot();
                   }
                   
               else { 
@@ -265,6 +266,25 @@
               var time= today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
               dateTime = date +" "+ time;
               }
+        
+        function initiateChat() {
+              updateOnlineStatus();
+              setTimeout(function(){
+                  takeSnapshot();
+                  } , 2000 );
+              setTimeout(function(){
+                  readEditAppOnlineStatus();
+                  } , 2000 );
+              setTimeout(function(){
+                  writeEditAppOnlineStatus();
+                  } , 2000 );
+                }
+                 
+        
+        
+        
+        
+        
         
     </script>
 
