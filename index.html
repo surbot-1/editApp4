@@ -242,14 +242,6 @@
                document.querySelector('#div5').innerHTML += '<br>' ;
                }  
         
-        function messageClear() {
-               document.querySelector('#div5').innerHTML = "";
-                 getOnlineStatus();
-                readEditAppOnlineStatus();
-                writeEditAppOnlineSatatus();
-                takeSnapshot();
-                }
-        
         function getOnlineStatus() { 
                   if (navigator.onLine) {
                      status = "online";
@@ -257,9 +249,8 @@
                       status = "offline";
                       }
                      }
-                     
-                      
- 
+        
+        
         function getDateTime() {  
               var today = new Date();
               var date =  today.getDate() + "." + (today.getMonth()+1) + "." + today.getFullYear();
@@ -267,8 +258,21 @@
               dateTime = date +" "+ time;
               }
         
+        function messageClear() {
+               document.querySelector('#div5').innerHTML = "";
+                 getOnlineStatus();
+             writeEditAppOnlineSatatus();   
+             readEditAppOnlineStatus();
+                takeSnapshot();
+                }
+        
+        
+                     
+                      
+ 
+        
         function initiateChat() {
-              updateOnlineStatus();
+             /* updateOnlineStatus();
               setTimeout(function(){
                   takeSnapshot();
                   } , 5000 );
@@ -277,7 +281,7 @@
                   } , 5000 );
               setTimeout(function(){
                   writeEditAppOnlineStatus();
-                  } , 5000 );
+                  } , 5000 ); */
                 }
                  
         
