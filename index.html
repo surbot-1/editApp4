@@ -204,6 +204,7 @@
          // readEditAppOnlineStatus();
         function readEditAppOnlineStatus() { 
                setInterval(function(){
+                 setTimeout(function(){
                var bRef = firebase.database().ref("editAppOnline"); 
                bRef.once("value", function(snapshot) {
                aName = snapshot.child("a_Name").val();
@@ -211,12 +212,14 @@
                cDate = snapshot.child("c_Date").val();
                document.querySelector('#div4').innerHTML = aName + " " + bStatus + " " + cDate ;
                 });
-               } , 5000 );
+                 } , 2000 );
+                } , 8000 );
               }   
         
       // writeEditAppOnlineSatatus();
        function writeEditAppOnlineSatatus() {
             setInterval(function(){
+              setTimeout(function(){
               getName();
               getOnlineStatus();
               getDateTime();
@@ -225,7 +228,8 @@
               b_Status: status , 
               c_Date: dateTime
                 });
-               } , 5000 );
+                 } , 5000 );
+                } , 8000 );
               }   
               
         
